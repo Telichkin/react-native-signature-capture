@@ -461,6 +461,8 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
 		
 		previousVertex = v;
 		addVertex(&length, previousVertex);
+		// Send event to have an ability to save data right after user ends touching
+		[self.manager publishDraggedEvent];
 	}
 	
 	[self setNeedsDisplay];
