@@ -293,7 +293,8 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
 	
 	UIImage *signatureImg;
 	UIImage *snapshot = [self snapshot];
-	[self erase];
+	// This line should be commented. Otherwise signature can't be correctly saved
+ 	// [self erase];
 	
 	if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
 		//signature
